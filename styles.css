@@ -130,11 +130,11 @@ body {
 /*TOP NAV*/
 /*Logo turns orange when hovered*/
 .logo {
-  filter: brightness(100); /*Making it appear white*/
+  filter: brightness(100) grayscale(100%);/*Making it appear white*/
 }
 
 .logo:hover {
-  filter: brightness(1);
+  filter: brightness(1) grayscale(0%);
   opacity: 0.9;
 }
 

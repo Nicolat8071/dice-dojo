@@ -67,7 +67,7 @@
 
 /*NOT USED IN ACTUAL SITE: This is for the preview button on the checkout page*/
   .preview {
-    height: fit-content;
+    width: 15rem !important;
     border: none;
     padding: 1rem;
     color: var(--color-text);
