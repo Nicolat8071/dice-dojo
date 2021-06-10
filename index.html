@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1">
+
+    <title>Enter the Dice Dojo</title>
+
+    <link rel="stylesheet" href="reset.css">
+    <link rel="stylesheet" href="layout.css">
+    <link rel="stylesheet" href="colours.css">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="buttons.css">
+    <link rel="stylesheet" href="media-query.css">
+    <link rel="stylesheet" href="side-nav.css">
+    <link rel="stylesheet" href="mini-cart.css">
+    <link rel="stylesheet" href="form.css">
+
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons|Material+Icons+Outlined|Material+Icons+Round" rel="stylesheet">
+    
+    <link rel="stylesheet" href="https://use.typekit.net/yjy2ujn.css">
+
+    <script src="responsive.js"></script>
+
+</head>
+<body class="body">
+    <div id="mySidenav" class="sidenav">
+        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+        <a href="product-listing.html">All products</a>
+        <a href="product-listing.html">Board Games</a>
+        <a href="product-listing.html">Magic Sealed Product</a>
+        <a href="product-listing.html">Criticl role</a>
+        <a href="product-listing.html">Dice & accessories</a>
+        <a href="product-listing.html">Card games</a>
+        <a href="product-listing.html">Mini wargames</a>
+        <a href="product-listing.html">Paint & hobby supplies</a>
+    </div>
+
+    <div id="myMiniCart" class="mini-cart">
+        <a href="javascript:void(0)" class="closebtn" onclick="closeMiniCart()">&times;</a>
+        
+        <div class="checkout-cart-responsive list">
+            <h2 class="alt">My Cart</h2>
+            <div>
+                <div class="cluster mini-cart-product">
+                    <img class="mini-cart-img" src="img/example-product.jpg" alt="Cards Against Humanity">
+                    <div display="list title">
+                        <h3>Cards</h3>
+                        <h3>against</h3> 
+                        <h3>humanity</h3>
+                    </div>
+                    <h3>X1</h3>
+                    <h3>$24.99</h3>
+                    <a href="#"><span class="material-icons-outlined delete"> delete</span></a>
+                </div>
+            </div>
+
+            <a href="checkout.html" class="btn btn-secondary go-to-checkout">Checkout</a>
+
+        </div>
+    </div>
+      
+      <div id="main"> 
+        <header>
+            <div class="cluster top-nav">
+                <div class="container container-a">
+                    <a href="index.html"><img class="logo" src="img/logo-orange.svg" alt="Dice Dojo Logo"></a>
+                </div>
+        
+                <div class="container container-b">
+                    <div class="list title">
+                        <h1 class="subtext"> Enter the</h1>
+                        <h1>Dice Dojo</h1>
+                    </div>
+                </div>
+        
+                <div class="container container-c">
+                    <input class="search-bar body-text" type="search" placeholder="Search for a product">
+                    <div>
+                        <a class="cart list :hover" onclick="openMiniCart()">
+                            <i class="material-icons-outlined menu-item">shopping_bag</i>
+                            <p>cart</p>
+                        </a>
+                    </div>
+                        <div class="hide">
+                        <i class="material-icons-round hide menu" onclick="openNav()">menu</i>
+                    </div>
+                </div>
+            </div>  
+
+            <div class="hide">
+                <div class="list responsive-title">
+                    <h1 class="subtext"> Enter the</h1>
+                    <h1>Dice Dojo</h1>
+                </div>
+            </div>
+        
+            <nav>
+                <ul>
+                <li>
+                    Board Games
+                    <ul>
+                    <li><a href="product-listing.html">All products</a></li>
+                    </ul>
+                </li>
+                <li>
+                    Magic sealed product
+                    <ul>
+                        <li><a href="product-listing.html">All products</a></li>
+                        <li><a href="product-listing.html">All products</a></li>
+                        <li><a href="product-listing.html">All products</a></li>
+                    </ul>
+                </li>
+                <li>
+                    Role play games
+                    <ul>
+                        <li><a href="product-listing.html">All products</a></li>
+                    </ul>
+                </li>
+                <li>
+                    Critical role
+                    <ul>
+                        <li><a href="product-listing.html">All products</a></li>
+                        <li><a href="product-listing.html">All products</a></li>
+                    </ul>
+                </li>
+                <li>
+                    Dice & Accessories
+                    <ul>
+                        <li><a href="product-listing.html">All products</a></li>
+                    </ul>
+                </li>
+                <li>
+                    Card games
+                    <ul>
+                        <li><a href="product-listing.html">All products</a></li>
+                    </ul>
+                </li>
+                <li>
+                    Mini wargames
+                    <ul>
+                        <li><a href="product-listing.html">All products</a></li>
+                    </ul>
+                </li>
+                <li>
+                    Paint & Hobby supplies
+                    <ul>
+                        <li><a href="product-listing.html">All products</a></li>
+                        <li><a href="product-listing.html">All products</a></li>
+                    </ul>
+                </li>
+                </ul>
+            </nav>
+        
+         
+        </header>
+
+        <main>
+            <h2 class="featured">Featured products</h2>
+
+            <div class="cluster">
+                <div class="collection">
+                    <div class="product list active-product">
+                        <a href="product-page.html"><img class="product_image" src="img/product-1.jpg" alt="product-1"></a>
+                        <h3>Cards against humanity</h3>
+                        <p>$24.99</p>
+                        <a class="btn btn-secondary :hover :focus" onclick="openMiniCart()">Add to cart</a>
+                    </div> 
+
+                    <div class="product disabled_product list"> 
+                        <img class="product_image" src="img/product-2.jpg" alt="product-2">
+                        <h3>Ladies & gentlemen</h3>
+                        <p>$34.99</p>
+                        <a href="#" class="btn btn-disabled">Add to cart</a>
+                    </div> 
+
+                    <div class="product disabled_product list">
+                        <img class="product_image" src="img/product-3.jpg" alt="product-3">
+                        <h3>Cubitos</h3>
+                        <p>$40.99</p>
+                        <a href="#" class="btn btn-disabled">Add to cart</a>
+                    </div> 
+
+                    <div class="product disabled_product list">
+                        <img class="product_image" src="img/product-4.jpg" alt="product-4">
+                        <h3>Apex</h3>
+                        <p>$70.00</p>
+                        <a href="#" class="btn btn-disabled">Add to cart</a>
+                    </div> 
+
+                    <div class="product disabled_product list">
+                        <img class="product_image" src="img/product-5.jpg" alt="product-5">
+                        <h3>Wingspan</h3>
+                        <p>$25.00</p>
+                        <a href="#" class="btn btn-disabled">Add to cart</a>
+                    </div> 
+
+                    <div class="product disabled_product list">
+                        <img class="product_image" src="img/product-6.jpg" alt="product-6">
+                        <h3>Monopoly</h3>
+                        <p>$34.99</p>
+                        <a href="#" class="btn btn-disabled">Add to cart</a>
+                    </div> 
+                </div>
+
+            </div>
+        </main>
+
+        <footer class="footer footer-cluster">
+
+            <div class="address"> 
+                <ul class="list footer-text">
+                    <li>Chicagoland Games:</li>
+                    <li>The Dice Dojo</li>
+                    <li class="body-text">5550 N Broadway St.</li>
+                    <li class="body-text"> Chicago, IL 60640</li>
+                </ul>
+            </div>
+    
+                <div class="list footer footer-logo"> 
+                    <img class="footer logo footer-cluster logo2" src="img/logo.svg" alt="Dice Dojo Logo">
+                    <h4 class="footer-text logo2">DICE DOJO</h4>
+                </div>
+    
+            <div class="store-hours"> 
+                <ul class="list">
+                    <li>Store Hours</li>
+                    <li class="body-text">Central Time (US & Canada)</li>
+                    <li class="body-text">10:00am to end of events</li>
+                </ul>
+            </div>
+        </footer>
+    </div>
+</body>
+</html>

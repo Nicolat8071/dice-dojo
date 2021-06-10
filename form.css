@@ -1,0 +1,202 @@
+/*FORM LAYOUT (Including CART PREVIEW)*/
+.form-main {
+  margin: 0.5rem;
+}
+
+.main-content {
+  margin: 2rem;
+}
+
+/*Each section of the form has a gap in order to define the parts*/
+.section {
+    margin: 0.5rem;
+  }
+ 
+  /*Some form inputs take up the whole of the width -- they will be this width*/
+  .full {
+    width:275px;
+  }
+
+  /*Some form inputs take up the half of the width - so this is how to display it*/
+  .double {
+    display: flex;
+    justify-content: space-between;
+  }
+  
+  /*Some form inputs take up half of the width -- they will be this width*/
+  .half {
+    width: 115px;
+  }
+  
+  /*Making the size of the select state the same as the half width*/
+  select {
+    min-width: 151px;
+    max-height: 55px;
+  }
+
+  select:hover {
+    box-shadow: 3px 3px rgba(138,56,255, 1);
+  }
+  
+  /*FORM and CART PREVIEW - displayed as a flex in large screen*/
+  .cluster-between {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  /*Making the cart buttona nd search bar invisible in th top right hand corner*/
+  .b {
+    filter: opacity(0);
+  }
+
+
+/*Form Visual Style*/
+.form {
+  outline: none;
+  background-color: white;
+  color: var(--color-primary);
+  border-radius: 0.5rem;
+  padding: 1rem;
+  margin: 5px;
+  resize: none;
+  outline: none;
+  border: 2px solid white;
+  box-shadow: 3px 3px rgba(138,56,255, 0.4);
+  transition: 0.5s ease;
+  flex-shrink: 0;
+}
+
+/*Taking away the default buttons for up and down to number input types*/
+.form::-webkit-inner-spin-button { 
+    appearance: none
+    }
+   
+
+/*MAKING FLOATING INPUTS -- when the field is clicked the label floats up*/  
+/*We dont want to see the placeholder of the input -- what is seen is a label*/  
+.hidden--visually {
+    display: none;
+}
+
+/*When user types, this defines the position and the font size*/  
+.floating__input {
+  padding: 1.8rem 1rem 0.3rem;
+  font-size: 16px;
+}
+
+.floating__input:hover {
+    box-shadow: 3px 3px rgba(138,56,255, 1);
+}
+
+.floating__input:focus {
+  border-color: var(--color-primary);
+  box-shadow: none;
+}
+
+/*Placeholder invisible*/  
+.floating__input::placeholder {
+  color: rgba(0, 0, 0, 0);
+}
+
+/*Initally the label is in the input position -- moves after clicking*/ 
+.floating__label {
+  display: flex;
+  position: relative; /*On top of the input*/ 
+  max-height: 0;
+  
+  color: var(--color-text);
+  text-shadow: none;
+}
+
+/*Where the label sits before it is clicked -- for the full sized inputs*/ 
+.floating__label::before {
+  content: attr(data-content);/*used to retrieve the value of an attribute of the selected element and use it in the stylesheet*/
+  display: inline-block;
+  filter: blur(0);
+  transform-origin: left top;
+  transition: transform 0.5s ease;
+  left: 1.4rem;
+  position: relative;
+}
+
+/*Where the label sits before it is clicked -- for the half sized inputs*/ 
+.half__floating__label::before {
+    text-align: left;
+}
+
+/*Where the label sits before it is clicked -- for the half sized inputs*/ 
+.floating__input:placeholder-shown + .floating__label::before {
+  transform: translate3d(0, -2.7rem, 0) scale3d(1, 1, 1);
+}
+
+.floating__label::before,
+.floating__input:focus + .floating__label::before {
+  transform: translate3d(0, -3.12rem, 0) scale3d(0.7, 0.7, 1);
+}
+
+.floating__input:focus + .floating__label::before {
+  color: var(--color-primary); 
+}
+
+/*CART PREVIEW*/ 
+/*Cart img is quite small*/
+.cart-img {
+width: 6rem;
+min-height: auto;
+}
+
+/*Content of the cart section is a flex -- this includes the paynow button*/
+.my__cart {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  gap: 3rem;
+}
+
+/*This is just the content of 'my cart'*/
+.checkout-cart {
+  border-radius: 1rem;
+  background-color: rgba(255, 255, 255, 0.7);
+  box-shadow: none;
+  padding: 1rem;
+  line-height: 2;
+  justify-content: space-between;
+}
+
+/*The line under summary*/
+.line {
+  display: block;
+  height: 2px;
+  background-color: var(--color-text);
+  margin-bottom: 1rem;
+}
+
+/*The products in the cart will have a similar style to the product tiles as defined here*/
+.cart-product {
+  background-color: white;
+  box-shadow: 3px 3px rgba(138,56,255, 0.4);
+  border-radius: 0.5rem;
+  padding: 1rem;
+  line-height: 0.5;
+  font-size: 14px;
+  gap: 10px;
+  margin-bottom: 2rem;
+  margin-top: 1rem;
+} 
+
+/*Paynow button has a unqiue style to make it pop out more*/
+.paynow {
+  font-family: lores-9-wide, sans-serif;
+  text-transform: uppercase;
+  width: 400px;
+  height: 3rem;
+  font-size: 18px;
+}
+
+
+/*Trash icon red to stand out*/
+.delete {
+  color: red;
+}
+

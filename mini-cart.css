@@ -1,0 +1,91 @@
+/* The side popup when the user clicks on the ADD TO CART button  
+Initially starts off as 0*/
+.mini-cart {
+    height: 89%; /* Bit of gap at the bottom */
+    width: 0; /* 0 width - change this with JavaScript */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Stay on top of the page*/
+    right: 0; /* Pops out of the right side*/
+    overflow-x: hidden; /* Disable horizontal scroll */
+    background-color: rgba(255, 255, 255, 0.9); /* Transparent white*/
+    transition: 0.5s; /* 0.5 second transition effect to slide in the sidenav */
+    padding-top: 3rem; /* Space it out a bit*/
+    margin-top: 1%;
+    border-radius: 0.5rem 0rem 0rem 0.5rem; /* So it still looks hidden on the right side*/
+  }
+  
+  /*CLOSE BUTTON*/
+  .mini-cart .closebtn {
+    position: absolute;  /*Sitting on top*/
+    top: 0;
+    right: 25px;
+    font-size: 36px;
+    margin-left: 50px;
+    font-family: 'Avenir'; 
+  }
+
+  /*Product insdide of the cart*/
+  .mini-cart-product {
+    max-width: 40rem;
+    margin: 1rem;
+    text-align: left;
+    margin-top: 2rem;
+
+    /*Basically the same style as the product tiles*/
+    background-color: white;
+    box-shadow: 3px 3px rgba(138,56,255, 0.4);
+    border-radius: 0.5rem;
+    padding: 1rem;
+    line-height: 0.5;
+    font-size: 14px;
+    gap: 10px;
+    margin-bottom: 2rem;
+    margin-top: 1rem;
+} 
+  /*Checkout button*/
+  .go-to-checkout {
+      width: 50%;   /*Want it to take up quite a bit of space*/
+      margin-top: 3rem;
+  }
+
+  /*Small image inside*/
+  .mini-cart-img {
+    max-width: 5rem; 
+  }
+
+  /* MEDIA QUERIES*/
+  /* On smaller screens, product image is smaller to save space*/
+  @media screen and (max-width: 700px) {
+  .mini-cart-img {
+    max-width: 3rem;
+  }
+
+  /* font change on small screen*/
+  .mini-cart-product {
+    font-size: 10px;
+    gap: 0.2rem;  /*Tiny gap*/
+    font-family: 'Avenir';
+    text-transform: capitalize; /*Because no longer LoRes font*/
+  }
+
+  .go-to-checkout {
+    width: 60%; /*Butoon a bit bigger*/
+
+  }
+}
+
+  /* On smaller screens, product image is omitted*/
+  @media screen and (max-width: 488px) {
+    .mini-cart-img {
+      display: none;
+    }
+
+    .mini-cart-product {
+      font-size: 10px;/*Tiny font*/
+      gap: 0.1rem; /*Tiny gap*/
+    }
+
+    .go-to-checkout {
+      width: 80%; /*Butoon a bit bigger*/
+    }
+  }   

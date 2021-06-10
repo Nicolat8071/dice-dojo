@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1">
+
+    <title>Enter the Dice Dojo</title>
+
+    <link rel="stylesheet" href="reset.css">
+    <link rel="stylesheet" href="layout.css">
+    <link rel="stylesheet" href="colours.css">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="buttons.css">
+    <link rel="stylesheet" href="media-query.css">
+    <link rel="stylesheet" href="form.css">
+    <link rel="stylesheet" href="confirm.css">
+
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons|Material+Icons+Outlined|Material+Icons+Round" rel="stylesheet">
+    
+    <link rel="stylesheet" href="https://use.typekit.net/yjy2ujn.css">
+
+    <script src="responsive.js"></script>
+
+</head>
+<body>
+    <div id="myConfirmation" class="confirmation">
+        <h2>Thank-you for your order</h2>
+        <div>
+            <p class="list">Your order number is #100203.</p>
+            <p>Please check your email for shipping updates!</p>
+        </div>
+        <a href="index.html" class="btn btn-secondary :hover :focus continue-shopping">continue shopping</a>
+    </div>
+
+    <header>
+    <div class="cluster top-nav">
+        <div class="container container-a">
+            <a href="index.html"><img class="logo" src="img/logo-orange.svg" alt="Dice Dojo Logo"></a>
+        </div>
+
+        <div class="container container-b">
+            <div class="list title">
+                <h1 class="subtext">Enter the</h1>
+                <h1>Dice Dojo</h1>
+            </div>
+        </div>
+
+        <div class="container container-c b">
+            <div class="hide">
+                <i class="material-icons hide">menu</i>
+            </div>
+            <div>
+                <a href="checkout.html" class="cart list :hover">
+                    <i class="material-icons-outlined">shopping_bag</i>
+                    <p>cart</p>
+                </a>
+            </div>
+        </div>
+    </div> 
+    </header>
+
+    <main class="main-content">
+        
+            <div class="breadcrumbs final">
+                <a href="index.html"><span class="material-icons-outlined white">chevron_left</span></a>
+                <p>Continue shopping</p>
+            </div>
+
+        <form action="" name="myForm"> 
+            <div class="checkout">
+
+                <form id="delivery" action=""> 
+                    <div class="list"> 
+                        
+                        <h2 class="delivery-heading">Delivery details</h2> 
+                        
+                        <div class="section">
+                            <div class="floating">
+                                <input id="first__name" class="full form floating__input" name="firstname" placeholder="First name" type="text" required>
+                                <label for="first__name" class="floating__label body-text" data-content="First Name">
+                                    <span class="hidden--visually">First Name</span>
+                                </label>
+                            </div>
+
+                            <div class="floating">
+                                <input id="last__name" class="full form floating__input" name="lastname" placeholder="Last Name" type="text" required>
+                                <label for="last__name" class="floating__label body-text" data-content="Last Name">
+                                    <span class="hidden--visually">Last Name</span>
+                                </label>
+                            </div>
+                        </div>
+                        <div class="section">
+                            <div class="double"> 
+                                <div class="floating">
+                                    <input id="apt__no" class="half form floating__input" name="apt__no" placeholder="Apartment no." type="text">
+                                    <label for="apt__no" class="half__floating__label floating__label body-text" data-content="Apartment no.">
+                                        <span class="hidden--visually">Apartment no.</span>
+                                    </label>
+                                </div>
+                                <div class="floating">
+                                    <input id="st__number" class="half form floating__input" name="st__number" placeholder="st__number" type="number" required>
+                                    <label for="st__number" class="half__floating__label floating__label body-text" data-content="Street number">
+                                        <span class="hidden--visually">Street number</span>
+                                    </label>
+                                </div>
+                            </div>
+
+                            <div class="floating">
+                                <input id="street__name" class="full form floating__input" name="street__name" placeholder="Apartment no." type="text" required>
+                                <label for="street__name" class="floating__label body-text" data-content="Street Name">
+                                    <span class="hidden--visually">Street name</span>
+                                </label>
+                            </div>
+                            <div class="floating">
+                                <input id="suburb" class="full form floating__input" name="suburb" placeholder="suburb" type="text" required>
+                                <label for="suburb" class="floating__label body-text" data-content="Suburb">
+                                    <span class="hidden--visually">Suburb</span>
+                                </label>
+                            </div>
+
+                            
+                            <div class="double"> 
+                                <select class="half form" name="state" required>
+                                    <option value="" disabled selected>Please select</option>
+                                    <option value="ACT">ACT</option>
+                                    <option value="NSW">NSW</option>
+                                    <option value="NT" >NT</option>
+                                    <option value="QLD">QLD</option>
+                                    <option value="SA">SA</option>
+                                    <option value="TAS">TAS</option>
+                                    <option value="VIC">VIC</option>
+                                    <option value="WA">WA</option>
+                                </select>
+
+                                <div class="floating">
+                                    <input id="post__code" class="half form floating__input" name="post__code" placeholder="post__code" type="text" required>
+                                    <label for="post__code" class="floating__label body-text" data-content="Post Code">
+                                        <span class="hidden--visually">Post Code</span>
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="section" > 
+                            <div class="floating">
+                                <input id="email" class="full form floating__input" name="email" placeholder="email" type="text" required>
+                                <label for="email" class="floating__label body-text" data-content="Email">
+                                    <span class="hidden--visually">Email</span>
+                                </label>
+                            </div>
+
+                            <div class="floating">
+                                <input id="ph__number" class="full form floating__input" name="ph__number" placeholder="ph__number" type="number" required>
+                                <label for="ph__number" class="floating__label body-text" data-content="Phone number">
+                                    <span class="hidden--visually">Phone number</span>
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+                </form>
+
+                <form id="payment" class="list">
+                        <h2 class="delivery-heading">Payment details</h2> 
+                        
+                        <div class="section">
+                            <div class="floating">
+                                <input id="ch__name" class="full form floating__input" name="ch__name" placeholder="ch__name" type="text" required>
+                                <label for="ch__name" class="floating__label body-text" data-content="Card holder's name">
+                                    <span class="hidden--visually">Card holder's name</span>
+                                </label>
+                            </div>
+                            <div class="floating">
+                                <input id="card_number" class="full form floating__input" name="card_number" placeholder="card_number" type="number" required>
+                                <label for="card_number" class="floating__label body-text" data-content="Card number">
+                                    <span class="hidden--visually">Card number</span>
+                                </label>
+                            </div>
+                            <div class="double">
+                                <div class="floating">
+                                    <input id="CVV" class="half form floating__input" name="CVV" placeholder="CVV" type="number" required>
+                                    <label for="CVV" class="floating__label body-text" data-content="CVV">
+                                        <span class="hidden--visually">CVV</span>
+                                    </label>
+                                </div>
+                                <div class="floating">
+                                    <input id="Expiry" class="half form floating__input" name="Expiry" placeholder="Expiry" type="datetime" required>
+                                    <label for="Expiry" class="floating__label body-text" data-content="Expiry">
+                                        <span class="hidden--visually">Expiry</span>
+                                    </label>
+                                </div>
+                                
+                            </div>
+                        </div>
+                </form>
+                
+                <div class="my__cart"> 
+                    <div class="checkout-cart">
+                        <h2 class="alt">My Cart</h2>
+
+                        <div class="cluster cart-product">
+                            <img class="cart-img" src="img/example-product.jpg" alt="Cards Against Humanity">
+                            <div display="list title">
+                                <h3>Cards</h3>
+                                <h3>against</h3> 
+                                <h3>humanity</h3>
+                            </div>
+                            <h3>X1</h3>
+                            <h3>$24.99</h3>
+                            <a href="#"><span class="material-icons-outlined delete"> delete</span></a>
+                        </div>
+
+                        <div>
+                            <h3>Order Summary</h3>
+                            <div class="line"> </div>
+                            <div class="cluster-between">
+                                <p>Items</p>
+                                <p>1</p>
+                            </div>  
+                            <div class="cluster-between">
+                                <p>Subtotal</p>
+                                <p>$24.99</p>
+                            </div> 
+                            <div class="cluster-between">
+                                <p>Shipping</p>
+                                <p class="purple">FREE</p>
+                            </div> 
+                            <div class="cluster-between">
+                                <p class="bold">Order total</p>
+                                <p class="bold">$24.99</p>
+                            </div> 
+                        </div>
+                    </div>
+                    <button type="submit" class="btn btn-primary paynow">Paynow</button>
+                    <button class="btn btn-secondary preview" onclick="openConfirmation()">NOT PART OF FINAL SITE (Click to preview the confirmation message)</button>
+                </div> 
+           </div>
+        </form>
+    </main>
+
+    <footer class="footer footer-cluster">
+
+      <div class="address"> 
+          <ul class="list footer-text">
+              <li>Chicagoland Games:</li>
+              <li>The Dice Dojo</li>
+              <li class="body-text">5550 N Broadway St.</li>
+              <li class="body-text"> Chicago, IL 60640</li>
+          </ul>
+      </div>
+
+          <div class="list footer footer-logo"> 
+              <img class="footer logo footer-cluster logo2" src="img/logo.svg" alt="Dice Dojo Logo">
+              <h4 class="footer-text logo2">DICE DOJO</h4>
+          </div>
+
+      <div class="store-hours"> 
+          <ul class="list">
+              <li>Store Hours</li>
+              <li class="body-text">Central Time (US & Canada)</li>
+              <li class="body-text">10:00am to end of events</li>
+          </ul>
+      </div>
+
+    </footer>
+</body>
+</html>

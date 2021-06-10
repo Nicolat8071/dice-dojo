@@ -1,0 +1,15 @@
+/*This is Dice Dojo's colour palette*/
+:root {
+    --color-primary: rgb(139, 66, 255);
+    --color-primary-light: #D4AFFF;
+
+    --color-secondary: #FFBA00;
+    --color-secondary-light: #FFD688;
+
+    --white: white;
+    --color-text: #404040;
+    --button-primary-bgd: #F4F4F4;
+    --disabled: #F4F4F4;
+    --disabled-text: #CECECE;
+    --footer-text: black;
+}

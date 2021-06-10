@@ -1,0 +1,238 @@
+/*For the media query, 
+I have not defined a certain set width that everything changes,
+but defined it depending on each indivual part
+I have ordered the queries from biggest to smallest max width*/
+
+/*HOMEPAGE*/
+/* Featured Products - 2 columns when below 1300 -- looks better*/
+@media (max-width: 1300px) {
+    .collection {
+        grid-template-columns: repeat(3, 1fr);
+        padding: 3% 5%;
+    }
+}
+
+/*CHECKOUT*/
+/* Delivey details, Payment and my cart are stacked on top of each other when the screen is smaller*/
+@media (max-width: 1259px) {
+    .checkout {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        min-width: 200px;
+        gap: 2rem;/* Adding a bit more gap to define the sections more*/
+    }
+}
+
+/*PRODUCT LISTING*/
+/* Products listing - 3 columns when below 1100 -- looks less cramped*/
+@media (max-width: 1100px) {
+    .products {
+        grid-template-columns: repeat(3, 1fr)  
+    }
+    
+    /*PRODUCT PAGE*/
+    /* Cards against humanity becomes a flex which shows img and text below it*/
+    .cah {
+        flex-direction: column;
+        padding: 2rem;
+    }
+
+    /* Hididng the title above the description and showing a new one above the img*/
+    .product-name-price {
+        display: none;
+    }
+
+    .product-name-price-responsive {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start; /* Making the new one above left aligned*/
+        width: 100%;
+        margin-top: 1rem;
+        margin-bottom: 1rem;
+    }
+}
+
+/* Featured Products - 1 columns when below 950 -- so its not too cramped*/
+@media (max-width: 950px) {
+    .collection {
+        grid-template-columns: repeat(2, 1fr);
+        
+    }
+}
+
+@media (max-width: 900px) {
+    
+    /*NAV BAR is hidden -- HAMBURGER MENU* is revealed*/
+    nav {
+        display: none;
+    }
+    /*The Dice Dojo title is hiddedn -- it becomes more simple design*/
+    .title {
+        display: none;
+    }
+
+    /*Hidden elements are shown as a flex -- for example the hambuger menu*/
+    .hide {
+        display: flex;
+        justify-content: center;
+        color: white;
+    }
+
+    /*Top Nav becomes darker to define it since the NAV BAR is hidden*/
+    .top-nav {
+        background-color: rgba(138,56,255, 0.9);
+        margin-bottom: 1rem;
+    }
+    
+    /*Logo becomes smaller*/
+    .logo{
+        min-width: 4rem;
+    }
+
+    /*Input becomes smaller to fit to smaller screen sizes*/
+    input[type=search] {
+        max-width: 1rem;
+        transition: 0.5s ease;
+        }
+
+    /*Placeholder is not shown*/
+    input[type=search]::placeholder {
+        font-size: 10px;
+    }
+    
+    /*But still expands when focused*/
+    input[type=search]:focus {
+        min-width: 11rem;
+    }
+
+    /*Centred elements in the new top nav*/
+    .container {
+        align-items: center;
+        width: 100%;
+        height: 4rem;
+    }
+    
+    /*Icons become bigger so they can be clicked on
+    they are merked as important in order to overide Google Material Icon styling*/
+    .material-icons-round {
+        font-size: 40px !important; 
+    }
+    .material-icons-outlined.menu-item {
+        font-size: 32px !important; 
+    }
+
+    /*Don't show the label on cart*/
+    .cart p {
+        display: none;
+    }
+
+    /*Now we padding is not needed in the header in order to maximise space*/
+    header div {
+        padding: 0;
+    }
+
+    /*A different title is shown -- which is no longer in line with the logo*/
+    .responsive-title {
+        padding-bottom: 2rem;
+        padding-top: 2rem;
+    }  
+}
+
+/*PRODUCT LISTING*/
+/* Products  lisiting - 2 columns when below 767 -- looks less cramped*/
+@media (max-width: 767px) {
+    .products {
+        grid-template-columns: repeat(2, 1fr);
+        padding-top: 0.5rem; /* Less padding to use less space */
+    }
+
+    /* Less padding to use less space */
+    .product {
+        padding: 0;
+        padding-top: 0.5rem;
+    }
+
+    /* Buttons become a bit smaller */
+    .btn {
+        font-size: 12px;
+        width: 8rem;
+        height: 2rem;
+        margin: 0.5rem;
+    }
+}
+
+/*FOOTER*/
+/* Footer layout Mobile - making it a column flex direction*/
+@media (max-width: 661px) {
+    .footer-cluster {
+      flex-direction: column;
+    }
+  
+    .footer-logo {
+        order: -1; /* So it appears at the top of the list*/
+        padding: 1rem;
+    }
+
+    .store-hours {
+        padding: 2rem;
+    }
+}
+
+/*CHECKOUT*/
+/*Making it smaller to fit screen*/
+@media (max-width: 586px) {
+    .cart-img {
+        min-width: 1.5rem; /*Making it smaller to fit screen*/
+    }
+
+    .checkout-cart {
+        max-width: 280px; /*Making it smaller to fit screen*/
+        padding: 0.5rem;
+    }
+    
+    .cart-product {
+    font-family: 'Avenir'; /*Changing font as it is more readble*/
+    text-transform: capitalize; /*As it is Avenir now*/
+    min-width: 15rem;
+    gap: 0.1rem; /*Tiny gap*/
+    }
+
+    /*Making same width as  'my cart' */
+    .paynow {
+        max-width: 301px;
+    }
+
+}
+
+/* Products - 1 columns when below 500*/
+@media (max-width: 500px) {
+    .collection {
+        grid-template-columns: repeat(1, 1fr);       
+    }
+
+    /* Texts become smaller*/
+    p {
+        font-size: 12px;
+    }
+} 
+
+/*PRODUCT LISTING*/
+/* Products listing - 1 column when below 360 -- looks less cramped*/
+@media (max-width: 420px) {
+    .products {
+        grid-template-columns: repeat(1, 1fr);
+    }
+}
+
+/*Search bar does not have space to expand much*/
+@media (max-width: 350px) {
+    /*Search is smaller*/
+    input[type=search]:focus {
+        min-width: 7rem;
+    }
+}
+
+
+

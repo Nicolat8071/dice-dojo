@@ -1,0 +1,38 @@
+/* The side navigation menu pop up -- js will handle the pop-up*/
+.sidenav {
+    height: 90%; /* Leaving a bit of gap as a stylisic choice*/
+    width: 0; /* 0 width - change this with JavaScript */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Stay on top of the page hiding the other elements*/
+    top: 0; /* Stay at the top */
+    right: 0; /* Opens from the right*/
+    background-color: rgba(255, 255, 255, 0.9); /* Transparent white*/
+    overflow-x: hidden; /* Disable horizontal scroll */
+    padding-top: 3rem; /* Spacing it out a bit*/
+    border-radius: 0.5rem;
+    margin: 1.5rem; /* This makes it seem like it is floating*/
+  }
+  
+  /* The navigation menu links */
+  .sidenav a {
+    padding: 0.5rem 0.5rem 1rem 2rem;   /* Giving them a bit of space */
+    text-decoration: none;
+    display: block;
+    transition: 0.5s ease; 
+  }
+  
+  /* When you click down on one of the links, it changes to the primary color */
+  .sidenav a:active {
+    color: var(--color-primary);
+  }
+  
+  /* Position and style the close button (top right corner) */
+  .sidenav .closebtn {
+    position: absolute;
+    top: 0;
+    right: 25px;
+    font-size: 50px;
+    margin-left: 40px;
+    font-family: 'Avenir'; /* Looks better in this font */
+  }
+

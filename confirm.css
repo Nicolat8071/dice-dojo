@@ -1,0 +1,23 @@
+/* The side confimation message -- 
+initially it will be hidden, when the user sumbits the form js will make it 100% of the screen*/
+.confirmation {
+    height: 100%; /* Takes iup the whole screen*/
+    width: 0; /* 0 width in order to hide it change this with JavaScript */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Stay on top of the rest of the page elements */
+    top: 0; /* Stay at the top */
+    background-color: rgba(255, 255, 255, 0.9); /* Transparent white*/
+    overflow-x: hidden; /* Disable horizontal scroll */
+
+    /* Content of the message is centred in the middle of the screen*/
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin: auto;
+    align-items: center;
+    gap: 1rem;
+  }
+
+
+
+  

@@ -1,0 +1,220 @@
+/*HEADER*/
+/*Want all the elements in the header to be a flex across the screen*/
+header div {
+  display: flex;
+  flex-direction: row;
+  padding-top: 1rem;
+  }
+
+/*Logo in the header width*/
+.logo {
+  min-width: 7rem;
+  }
+
+/*Creating a cluster of the different parts in the top nav -> logo - title - search/cart*/
+.cluster{
+  display: flex;
+  flex-direction: row;
+  padding: 1rem;
+  align-items: center;
+  justify-content: center;
+  }
+
+/*Each conatainer -> logo - title - search/cart takes up a thrid of the screen*/
+.container {
+  display: flex;
+  width: 33.3%;
+  align-items: baseline;
+  gap: 10px;
+  }
+
+/*Conatainer -> LOGO need to stay to the left of the page*/
+.container-a {
+  justify-content: flex-start;
+  }
+  
+/*Conatainer -> TITLE need to stay the centre*/
+.container-b {
+  justify-content: center;
+  }
+
+/*Conatainer -> search/cart need to stay the right of the page*/
+.container-c {
+  justify-content: flex-end;
+  }
+  
+/*NAV BAR -- PRODUCTS*/
+/*On the large screen version hamburger menu is not needed so is hidden*/
+.hide {
+  display: none;
+  }
+
+nav {
+  padding-left: 1.5rem;
+  padding-bottom: 2rem;
+  }
+
+/*Removing styling*/
+ol, ul {
+	list-style: none;
+  margin-left: 0;
+  padding: 0;
+  }
+
+/* Layout of each product category - how they sit together*/
+nav > ul{
+  display:flex; /*it will resize automatically*/
+  flex-direction: row; 
+  gap: 0.8em; 
+  text-align: center;
+  }
+
+/* Layout of each product category name within the box*/ 
+nav li{
+  padding: 0.8em 1em;
+  width: 100%;
+  transform: translateX(-1em);
+  border-radius: 0.5rem;
+  justify-content:center;
+  display: flex;
+  flex-direction: column;
+  }
+
+/*Drop down style*/ 
+nav ul ul {
+  transform: scale(1,0); /* Hidden when not hovered*/ 
+  transform-origin: top center; /*Hidden under Categories in the middle*/ 
+  position: absolute; /*Hidden under Categories - */ 
+  top:100%;
+  text-align: left; /*Text is not centred in subcategories*/ 
+  }
+
+nav li:hover ul{
+  transform: scale(1,1); /* The it become the full scale when hovered -- reveals the subcategories*/ 
+  }
+
+
+/*PRODUCT TILES LAYOUT -- INDEX PAGE FEATURED PRODUCTS*/ 
+/* Product tiles grid layout for featured products*/
+.collection {
+  display: grid;
+  grid-auto-rows: minmax(200px, auto); /*at least 100px for a product*/
+  gap: 1rem;  /*gap between products*/
+  grid-template-columns: repeat(3, 1fr); /* 3 products per row*/
+  margin: auto; /*Centred in the middle of the screen*/
+
+  max-width: 1500px; /* So each product tile does not get too big*/
+  padding-left: 10rem;
+  padding-right: 10rem;
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+}
+
+/*PRODUCT TILES LAYOUT -- PRODUCT LISTING PAGE ALL PRODUCTS*/ 
+/* Product tiles grid layout for all products*/
+.products {
+  display: grid;
+  gap: 1rem;
+  grid-template-columns: repeat(4, 1fr);  /* 4 products per row*/
+  
+  padding-left: 1rem;
+  padding-right: 1rem;
+  padding-top: 2rem;
+  padding-bottom: 1rem;
+  margin: auto;
+
+  max-width: 1400px; /* So each product tile does not get too big*/
+}
+
+
+.product_image {
+  height: auto; /*Maintaining aspect ration*/
+  width: 80%; /* So the image is not too big*/
+}
+
+/*To centre the product -- because it is a link we need to add some padding to make it mor centred*/
+.active-product .product_image {
+  padding-left: 10%;
+}
+
+/*PRODUCT PAGE - CARDS AGAINST HUMANITY*/
+.margin {
+  margin: 1rem;
+}
+
+/*PCARDS AGAINST HUMANITY - product box*/
+.cah {
+  display: flex;
+  flex-direction: row; /*Img - Content flexing row direction -- changes to column with media queries*/
+  margin: auto; /*Centred in the page*/
+  margin-bottom: 3rem;
+  align-content: center;
+  align-items: center;
+  justify-content: center;
+
+  gap: 1rem;
+  min-width: 280px;
+  max-width: 1500px;
+}
+
+
+.example-product {
+  max-width: 100%; /*On bigger screens the img can be full size*/
+}
+
+/*The content of the product cards against humanity is aligned to the left in a list like way*/
+.list-b {
+  display: flex;
+  flex-direction: column;
+  align-items: left;
+  justify-content: left;
+  text-align: left; /*The other list class centres the content*/
+}
+
+/*Hiding the title when the screen is larger - and showing another title that sits on the top of the product rather than under it*/
+.product-name-price-responsive {
+  display: none;
+}
+
+
+/*CHECKOUT PROCESS -- REFER TO FORM.CSS FOR FORM LAYOUT*/
+.checkout {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: space-between;
+  align-content: center;
+  margin: auto;
+  
+  max-width: 1600px; /*so it doent get to big*/
+}
+
+
+/*FOOTER*/
+/* Footer layout desktop - flex direction row*/
+.footer{
+  padding-left: 2rem;
+  padding-right: 2rem;
+  padding-bottom: 4rem;
+  padding-top: 2rem;
+}
+
+.footer-cluster{
+  display: flex;
+  flex-wrap: wrap-reverse;
+  justify-content: space-evenly; /* so it looks visually appealing*/
+  align-items: center;
+  flex-direction: row;
+}
+
+/* But list part of footer - flex direction column*/
+.list {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center; /* This alternative list centres the content*/
+}
+
+
+
